@@ -1,0 +1,55 @@
+Creați o aplicație ce implementează funcționalitățile unui calculator științific.
+
+Calculatorul va avea următoarele funcționalități:
+
+poate evalua expresii matematice ce conțin paranteze rotunde și/sau pătrate
+suportă următoarele operații: adunare, scădere, înmulțire, împărțire, putere, radical
+calculatorul trebuie să poate procesa orice ecuație și să afișeze rezultatul pe ecran
+ecuațiile vor fi introduse de la tastatură. Utilizatorul va scrie ecuație pe o linie, iar la apăsarea tastei Enter, aplicația va afișa rezultatul. Calculatorul va accepta ecuații noi până când utilizatorul introduce „exit”
+pentru expresii invalide calculatorul va afișa un mesaj de eroare
+NU pot fi folosite biblioteci externe pentru partea de parsare a expresiei sau de calcul a rezultatului
+soluția trebuie implementată utilizând doar biblioteci standard din C++ (precum iostream, string, fstream, etc) utilizate în cadrul cursurilor și laboratoarelor; clasele STL nu sunt acceptate decât atunci când sunt cerute în mod explicit (doar în cadrul fazei 2)
+
+
+Exemple de ecuații folosite ca input:
+
+[40+(5-1)]*2 va afișa 88
+5 / 0 va afișa eroare deoarece împărțirea la 0 nu are sens
+[(2*3)^2]/4-(6+2)#3, unde x^y înseamnă x la puterea y și x#y radical de ordinul y din x, va afișa 7
+2 * 3.2 va afișa 6.4
+24342343.0002-3 va afișa 24342340.0002
+2 *    3 - 8 va afișa -2
+
+
+Faza 1:
+Deadline: 3 decembrie 2023
+Minim 3 clase ce au legătură cu proiectul
+Clasele trebuie să conțină (per total, nu fiecare) cel puțin un vector alocat dinamic de caractere, un vector numeric alocat dinamic, un câmp constant, un câmp static și o metodă statică. Membrii trebuie să aibă legătură cu clasa.
+Toate atributele vor fi definite în zona privată a clasei
+Toate atributele vor avea metode de acces; setterii vor conține validări
+Fiecare clasa va conține cel puțin 2 metode generice (altele decât constructorii sau metodele de acces) ce vor fi utilizate pentru a realiza diverse prelucrări
+Fiecare clasă va conține cel puțin un constructor implicit și unul cu parametri. Clasele cu membri pointeri vor respecta „regula celor 3”.
+Fiecare clasă va conține supraîncărcări pentru operatorii << și >>
+Fiecare clasă va avea cel puțin 2 operatori supraîncărcați dintre următorii (același operator nu poate fi supraîncărcat în 2 clase diferite):
+operator de indexare []
+operatori aritmetici (+,-,* or /)
+++ or -- (ambele forme)
+cast implicit sau explicit
+operator de negație !
+operatori relaționali (<.>,=<,>=,==)
+Clasele vor fi implementate în propriul fișier header și/sau cpp
+Funcția main va fi localizată într-un alt fișier cpp
+Această fază este considerată implementată dacă cel puțin 75% dintre cerințe sunt implementate
+
+
+Barem Faza 1
+
+
+1 punct - respectarea cerințelor de încărcare și structurare ale proiectului
+3 puncte - fiecare clasă corect implementată astfel:
+1 punct - implementarea corectă a clasei (conform cerințelor - atribute, constructori, getteri, setteri, regula celor 3)
+1 punct - metodele generice ce au legătură cu clasa
+1 punct - operatorii (de afișare și de calcul)
+-5 puncte - clasele nu sunt funcționale și nu pot rezolva nici măcar ecuații simple de tipul celor ce utilizează operatorii +,-,*,/ și nu utilizează paranteze (ultimele 3 exemple)
+
+* clasele ce nu au legătură cu proiectul nu vor fi luate în considerare
