@@ -204,8 +204,7 @@ public:
 		this->countAll = countPersons;
 		this->all = allPersons;
 
-		//putem face shallow copy pt ca in main avem alocare dinamica
-
+		//putem face shallow copy deoarece in main avem alocare dinamica
 
 		/*this->countAll = countPersons;
 		this->all = new Person*[countPersons];
